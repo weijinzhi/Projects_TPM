@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Sheet" table="SHEET">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="SHEET_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="start" type="java.util.Date">
+            <column name="START" />
+        </property>
+        
+        <property name="end" type="java.util.Date">
+            <column name="END" />
+        </property>
+        
+        <property name="sheetDesc" type="java.lang.String">
+            <column name="SHEET_DESC" />
+        </property>
+        
+        
+        <many-to-one name="emp" class="Employee" fetch="join">
+            <column name="EMP_ID" />
+        </many-to-one>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Nation" table="NATION">
+    
+        <id name="nationId" type="java.lang.Integer">
+            <column name="NATION_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="nationName" type="java.lang.String">
+            <column name="NATIO_NNAME" />
+        </property>
+        
+        <set name="emps" table="EMPLOYEE" inverse="false" lazy="true">
+            <key>
+                <column name="NATION_ID" />
+            </key>
+            <one-to-many class="Employee" />
+        </set>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Section" table="SECTION">
+    
+        <id name="section_id" type="java.lang.Integer">
+            <column name="SECTION_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="section_name" type="java.lang.String">
+            <column name="SECTION_NAME" />
+        </property>
+        
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        
+        <property name="sectionManager" type="java.lang.String">
+            <column name="SECTION_MANAGER" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

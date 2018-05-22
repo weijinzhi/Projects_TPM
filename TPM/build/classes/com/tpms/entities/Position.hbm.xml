@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Position" table="POSITION">
+    
+        <id name="position_id" type="java.lang.Integer">
+            <column name="POSITION_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="position_name" type="java.lang.String">
+            <column name="POSITION_NAME" />
+        </property>
+        
+        <property name="salary" type="java.lang.String">
+            <column name="SALARY" />
+        </property>
+        
+        <many-to-one name="section" class="Section" fetch="join">
+            <column name="SECTION_ID" />
+        </many-to-one>
+        
+        <set name="emps" table="EMPLOYEE" inverse="false" lazy="false">
+            <key>
+                <column name="POSITION_ID" />
+            </key>
+            <one-to-many class="Employee" />
+        </set>
+    </class>
+</hibernate-mapping>

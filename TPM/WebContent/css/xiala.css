@@ -1,0 +1,27 @@
+ul li {
+  position: relative; /* 使子選單依照母選單的座標顯示 */
+}
+/* 設定母選單的連結樣式 */
+ul li a{
+  background: url(detail.png);
+}
+/* 當母選單下沒有子選單時，也就是說只有一個連結時，隱藏detail.png */
+ul li a:only-child{
+  background: none;
+}
+ul li:hover > ul {
+  display: block; /* 滑鼠滑入母選單後，顯示子選單 */
+}
+/* 二級選單顯示於一級選單的正下方 */
+ul ul {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  display: none;
+}
+/* 三級選單則顯示於二級選單的右方 */
+ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}

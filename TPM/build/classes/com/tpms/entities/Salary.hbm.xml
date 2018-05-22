@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Salary" table="SALARY">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="SALARY_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        
+        <property name="absence" type="java.lang.String">
+            <column name="ABSENCE" />
+        </property>
+        
+        <property name="business" type="java.lang.String">
+            <column name="BUSINESS" />
+        </property>
+        
+        <property name="basic" type="java.lang.String">
+            <column name="BASIC" />
+        </property>
+        
+        <property name="salary" type="java.lang.String">
+            <column name="SALARY" />
+        </property>
+        
+        <property name="annual" type="java.lang.String">
+            <column name="ANNUAL" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

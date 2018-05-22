@@ -1,0 +1,154 @@
+/* v1.0 | 20080212 http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, img, b, u, i, dl, dt, dd, ol, ul, li, form, label, th, td {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	list-style: none;
+}
+
+
+
+body, input, select, textarea, th, td, div, fieldset, blockquote, p {
+	font-family: arial, sans-serif;
+	font-size: 12px;
+}
+
+input, textarea {
+	font-size: 13px;
+}
+
+
+input[type=text], input[type=password], textarea {
+	border: 1px solid #000000;
+	padding: 2px;
+}
+
+input[type=text], input[type=password], select, textarea {
+	margin-top: 2px;
+}
+
+
+.readonly, input[readonly], input[disabled], textarea[readonly],textarea[disabled] {
+	color:#555;
+	background-color: #FF0000;
+}
+
+
+.focus, input:focus, select:focus, textarea:focus {
+	outline: red solid 1px;
+}
+
+
+a:link {
+	color: #0000FF;
+}
+
+a:visited {
+	color: #0000FF;
+}
+
+a:hover {
+	color: #FF0000;
+}
+
+
+.left {
+	float: left;
+	display: inline;
+}
+
+.right {
+	float: right;
+	display: inline;
+}
+
+.clear {
+	clear: both;
+}
+
+div.hr {
+	clear: both;
+
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
+	border: 1px solid #87CEEB;
+	padding: 0;
+	margin: 2px;
+}
+
+
+button, input[type=button] {
+	border: 1px solid #7F9DB9;
+	padding: 2px;
+	background: #000000;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,
+		StartColorStr=#FF0000, EndColorStr=#FF0000);
+}
+
+button:hover, input[type=button]:hover {
+	border: 1px solid #000000;
+	padding: 2px;
+	background: lightblue;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,
+		StartColorStr=#000000, EndColorStr=#000000);
+	cursor: pointer;
+}
+
+
+.table-edit {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table-edit tr {
+	height: 22px;
+}
+
+.table-edit td {
+	border-color: #000000;
+	border-style: none none dashed none;
+	border-width: 0px 0px 1px 0px;
+	padding: 5px;
+}
+
+.table-edit .title {
+	background-color: #000000;
+}
+
+.title {
+	background: #6495ED;
+
+	background-repeat: no-repeat;
+	height: 50px;
+}
+
+td span.combobox {
+	margin-top: 2px;
+}
+
+input.combobox-text {
+	margin: 0;
+}
+
+input[readonly].combotree-text {
+	background: window;
+}
+
+input[disabled].combotree-text {
+	background: #000000;
+}
+
+div.menu-item {
+	border: 0
+}
+
+div.combobox-content {
+	cursor: pointer;
+}
+
+div.tree-node {
+	height: 23px;
+}

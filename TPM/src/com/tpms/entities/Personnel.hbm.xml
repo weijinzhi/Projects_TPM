@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Personnel" table="PERSONNEL">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="oldId" type="java.lang.Integer">
+            <column name="OLD_ID" />
+        </property>
+        
+        <property name="newId" type="java.lang.Integer">
+            <column name="NEW_ID" />
+        </property>
+        
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        
+        <property name="oldSection" type="java.lang.String">
+            <column name="OLD_SECTION" />
+        </property>
+        
+        <property name="newSection" type="java.lang.String">
+            <column name="NEW_SECTION" />
+        </property>
+        
+        <property name="oldPosition" type="java.lang.String">
+            <column name="OLD_POSITION" />
+        </property>
+        
+        <property name="newPosition" type="java.lang.String">
+            <column name="NEW_POSITION" />
+        </property>
+        
+        <property name="oldsalary" type="java.lang.String">
+            <column name="OLD_SALARY" />
+        </property>
+        
+        <property name="newsalary" type="java.lang.String">
+            <column name="NEW_SALARY" />
+        </property>
+        
+        <property name="reason" type="java.lang.String">
+            <column name="REASON" />
+        </property>
+        
+        <property name="date" type="java.util.Date">
+            <column name="DATE" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

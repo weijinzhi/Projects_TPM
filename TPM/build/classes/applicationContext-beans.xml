@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- education -->
+
+	<bean id="educationDao" class="com.tpms.dao.EducationDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="educationService" class="com.tpms.service.EducationService">
+		<property name="educationDao" ref="educationDao"></property>
+	</bean>
+
+	<bean id="educationAction" class="com.tpms.actions.EducationAction"
+		scope="prototype">
+		<property name="educationService" ref="educationService"></property>
+	</bean>
+	
+	<bean id="managerDao" class="com.tpms.dao.ManagerDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="managerService" class="com.tpms.service.ManagerService">
+		<property name="managerDao" ref="managerDao"></property>
+	</bean>
+
+	<bean id="managerAction" class="com.tpms.actions.ManagerAction"
+		scope="prototype">
+		<property name="managerService" ref="managerService"></property>
+	</bean>
+	
+	<!-- section -->
+
+	<bean id="sectionDao" class="com.tpms.dao.SectionDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="sectionService" class="com.tpms.service.SectionService">
+		<property name="sectionDao" ref="sectionDao"></property>
+	</bean>
+
+	<bean id="sectionAction" class="com.tpms.actions.SectionAction"
+		scope="prototype">
+		<property name="sectionService" ref="sectionService"></property>
+	</bean>
+	
+	
+	<!-- nation -->
+
+	<bean id="nationDao" class="com.tpms.dao.NationDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="nationService" class="com.tpms.service.NationService">
+		<property name="nationDao" ref="nationDao"></property>
+	</bean>
+
+	<bean id="nationAction" class="com.tpms.actions.NationAction"
+		scope="prototype">
+		<property name="nationService" ref="nationService"></property>
+	</bean>
+	
+	<!-- personnel -->
+
+	<bean id="personnelDao" class="com.tpms.dao.PersonnelDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="personnelService" class="com.tpms.service.PersonnelService">
+		<property name="personnelDao" ref="personnelDao"></property>
+	</bean>
+
+	<bean id="personnelAction" class="com.tpms.actions.PersonnelAction"
+		scope="prototype">
+		<property name="personnelService" ref="personnelService"></property>
+	</bean>
+	
+	<!-- position -->
+
+	<bean id="positionDao" class="com.tpms.dao.PositionDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="positionService" class="com.tpms.service.PositionService">
+		<property name="positionDao" ref="positionDao"></property>
+	</bean>
+
+	<bean id="positionAction" class="com.tpms.actions.PositionAction"
+		scope="prototype">
+		<property name="positionService" ref="positionService"></property>
+		<property name="sectionService" ref="sectionService"></property>
+	</bean>
+	
+	<!-- salary -->
+
+	<bean id="salaryDao" class="com.tpms.dao.SalaryDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="salaryService" class="com.tpms.service.SalaryService">
+		<property name="salaryDao" ref="salaryDao"></property>
+	</bean>
+
+	<bean id="salaryAction" class="com.tpms.actions.SalaryAction"
+		scope="prototype">
+		<property name="salaryService" ref="salaryService"></property>
+	</bean>
+	
+	<!-- sheet -->
+
+	<bean id="sheetDao" class="com.tpms.dao.SheetDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="sheetService" class="com.tpms.service.SheetService">
+		<property name="sheetDao" ref="sheetDao"></property>
+	</bean>
+
+	<bean id="sheetAction" class="com.tpms.actions.SheetAction"
+		scope="prototype">
+		<property name="sheetService" ref="sheetService"></property>
+		<property name="employeeService" ref="employeeService"></property>
+	</bean>
+	
+	<bean id="employeeDao" class="com.tpms.dao.EmployeeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="employeeService" class="com.tpms.service.EmployeeService">
+		<property name="employeeDao" ref="employeeDao"></property>
+	</bean>
+
+	<bean id="employeeAction" class="com.tpms.actions.EmployeeAction"
+		scope="prototype">
+		<property name="employeeService" ref="employeeService"></property>
+	</bean>
+
+</beans>

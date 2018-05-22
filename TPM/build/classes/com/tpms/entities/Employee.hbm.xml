@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-12 16:51:46 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpms.entities">
+    <class name="Employee" table="EMPLOYEE">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="EMP_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        
+        <property name="age" type="java.lang.Integer">
+            <column name="AGE" />
+        </property>
+        
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        
+        <property name="birth" type="java.util.Date">
+            <column name="BIRTH" />
+        </property>
+        
+        <property name="img" type="java.sql.Blob">
+            <column name="IMG" />
+        </property>
+        
+        <property name="mary" type="java.lang.String">
+            <column name="MARY" />
+        </property>
+        
+        <property name="height" type="java.lang.String">
+            <column name="HEIGHT" />
+        </property>
+        
+        <property name="polity" type="java.lang.String">
+            <column name="POLITY" />
+        </property>
+        
+        <property name="idcard" type="java.lang.String">
+            <column name="IDCARD" />
+        </property>
+        
+        <property name="account" type="java.lang.String">
+            <column name="ACCOUNT" />
+        </property>
+        
+        <property name="bank_name" type="java.lang.String">
+            <column name="BANK_NAME" />
+        </property>
+        
+        <property name="arrival" type="java.util.Date">
+            <column name="ARRIVAL" />
+        </property>
+        
+        <many-to-one name="position" class="Position" fetch="join">
+            <column name="POSITION_ID" />
+        </many-to-one>
+        
+        <many-to-one name="section" class="Section" fetch="join">
+            <column name="SECTION_ID" />
+        </many-to-one>
+        
+        <many-to-one name="nation" class="Nation" fetch="join">
+            <column name="NATION_ID" />
+        </many-to-one>
+        
+        <many-to-one name="education" class="Education" fetch="join">
+            <column name="EDUCATION_ID" />
+        </many-to-one>
+        
+        <set name="sheet" table="SHEET">
+            <key>
+                <column name="EMP_ID" />
+            </key>
+            <one-to-many class="Sheet" />
+        </set>
+        
+        <property name="Incumbency" type="java.lang.String">
+            <column name="INCUMBENCY" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
